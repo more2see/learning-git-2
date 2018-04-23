@@ -1,0 +1,20 @@
+
+NA AUTOPREFIXER FUKNCJE ZNALAZLAM ALE NIE DZIAŁA.....
+
+autoprefixer-cli -o style.prefixed.css style.css
+
+
+
+NA NU-HTML-CKECKER NIE MAM POJECIA CZY TO TA FUNKCJA......
+
+var checker = require('nu-html-checker');
+ 
+var batch = checker.validate([ '*.html' ]);
+ 
+batch.on('progress', function (e) {
+  console.log(checker.format('stylish', e.value), '\n');
+});
+ 
+batch.on('end', function (err) {
+  if (err) console.error(err.stack);
+})
